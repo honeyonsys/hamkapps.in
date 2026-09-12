@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAMK Apps | Modern SaaS, Smart Plugins & Developer Integrations</title>
+  <meta name="description" content="Discover HAMK Apps - An independent software suite showcasing high-impact SaaS products, browser plugins, productivity tools, and seamless API integrations.">
+  <meta name="keywords" content="HAMK Apps, SaaS products, plugins, chrome extensions, web apps, API integrations, software tools">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hamkapps.in/">
+  <meta property="og:title" content="HAMK Apps - SaaS & Software Suite">
+  <meta property="og:description" content="Explore our curated ecosystem of SaaS solutions, browser plugins, and API integrations.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              200: '#c7d2fe',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              800: '#3730a3',
+              900: '#312e81',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Inline fallback logo styling */
+    .brand-gradient {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 selection:bg-indigo-500 selection:text-white antialiased">
+
+  <!-- ============================================================ -->
+  <!-- NAVBAR                                                       -->
+  <!-- ============================================================ -->
+  <header class="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-slate-200/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl brand-gradient flex items-center justify-center text-white font-black text-xl shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform">
+          H
+        </div>
+        <div class="flex flex-col">
+          <span class="font-extrabold text-xl tracking-tight text-slate-900 group-hover:text-indigo-600 transition-colors">
+            HAMK <span class="text-indigo-600 font-semibold">Apps</span>
+          </span>
+          <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-500 -mt-1">
+            Software & SaaS Studio
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="#intro" class="hover:text-indigo-600 transition-colors">Overview</a>
+        <a href="#products" class="hover:text-indigo-600 transition-colors">Products &amp; Plugins</a>
+        <a href="#contact" class="hover:text-indigo-600 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Desktop Action CTA -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-200 transition-all">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-slate-600"></i>
+          Contact Us
+        </a>
+        <a href="#products" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 shadow-md shadow-indigo-600/25 transition-all">
+          Explore Apps
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none" aria-label="Toggle menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-5 shadow-xl">
+      <div class="flex flex-col gap-4 text-base font-semibold text-slate-700">
+        <a href="#intro" class="hover:text-indigo-600 transition-colors">Overview</a>
+        <a href="#products" class="hover:text-indigo-600 transition-colors">Products &amp; Plugins</a>
+        <a href="#contact" class="hover:text-indigo-600 transition-colors">Contact</a>
+        <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+          <a href="#products" class="text-center w-full py-2.5 px-4 bg-indigo-600 text-white font-bold rounded-lg text-sm shadow-md">
+            Explore All Products
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ============================================================ -->
+  <!-- HERO / INTRO SECTION (At the top)                           -->
+  <!-- ============================================================ -->
+  <section id="intro" class="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-28 hero-glow bg-grid-pattern border-b border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      
+      <!-- Top Announcement Pill -->
+      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-200/70 text-indigo-700 text-xs sm:text-sm font-semibold mb-6 shadow-sm">
+        <span class="flex h-2 w-2 rounded-full bg-indigo-600 animate-ping"></span>
+        <span>Showcasing Products by HAMK Apps</span>
+        <span class="text-slate-300">|</span>
+        <span class="text-indigo-900 font-medium hidden sm:inline">SaaS • Extensions • APIs</span>
+      </div>
+
+      <!-- Main Catchy Headline -->
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] max-w-4xl mx-auto mb-6">
+        Intelligent SaaS, Smart Plugins &amp; 
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-600">
+          Seamless Integrations
+        </span>
+      </h1>
+
+      <!-- Intro Subtitle -->
+      <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
+        HAMK Apps is an index and innovation lab creating high-utility software products. From full-scale SaaS platforms to browser extensions and developer integrations, we build solutions that get work done.
+      </p>
+
+      <!-- Primary Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <a href="#products" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-base font-bold text-white bg-indigo-600 hover:bg-indigo-700 shadow-xl shadow-indigo-600/25 transition-all hover:scale-[1.02]">
+          <i data-lucide="layers" class="w-5 h-5"></i>
+          Explore Products Catalog
+        </a>
+        <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-bold text-slate-700 bg-white hover:bg-slate-100 border border-slate-200 shadow-sm transition-all hover:border-slate-300">
+          <i data-lucide="mail" class="w-5 h-5 text-slate-500"></i>
+          Contact Details
+        </a>
+      </div>
+
+      <!-- Highlight Value Cards (Grid of 4) -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-left max-w-5xl mx-auto">
+        
+        <div class="p-5 rounded-2xl bg-white/90 backdrop-blur-sm border border-slate-200/80 shadow-sm hover:border-indigo-200 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3">
+            <i data-lucide="cloud" class="w-5 h-5"></i>
+          </div>
+          <h2 class="font-bold text-slate-900 text-sm sm:text-base">SaaS Platforms</h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">Multi-tenant web applications built for scale and collaboration.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white/90 backdrop-blur-sm border border-slate-200/80 shadow-sm hover:border-indigo-200 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center mb-3">
+            <i data-lucide="puzzle" class="w-5 h-5"></i>
+          </div>
+          <h2 class="font-bold text-slate-900 text-sm sm:text-base">Plugins &amp; Tools</h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">Extensions for browsers &amp; IDEs to automate daily operations.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white/90 backdrop-blur-sm border border-slate-200/80 shadow-sm hover:border-indigo-200 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3">
+            <i data-lucide="cable" class="w-5 h-5"></i>
+          </div>
+          <h2 class="font-bold text-slate-900 text-sm sm:text-base">Integrations &amp; APIs</h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">Webhook relays, connectors, and bridges across platforms.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white/90 backdrop-blur-sm border border-slate-200/80 shadow-sm hover:border-indigo-200 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-3">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <h2 class="font-bold text-slate-900 text-sm sm:text-base">Light &amp; High-Speed</h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">Crafted with modern clean code, privacy, and zero bloat.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================ -->
+  <!-- PRODUCTS LISTING SECTION                                      -->
+  <!-- ============================================================ -->
+  <section id="products" class="py-20 bg-slate-50/60 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 text-indigo-600 font-bold text-xs uppercase tracking-wider mb-2">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            Product Portfolio
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Our Apps &amp; Products
+          </h2>
+          <p class="text-slate-600 text-base mt-2 max-w-xl">
+            Browse through our software lineup. Select a category or search below.
+          </p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="w-full md:w-80 relative">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5"></i>
+          <input 
+            type="text" 
+            id="search-products" 
+            placeholder="Search products or tags..." 
+            class="w-full pl-10 pr-4 py-2.5 bg-white rounded-xl border border-slate-200 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 shadow-sm transition-all"
+          >
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex flex-wrap items-center gap-2 pb-8 border-b border-slate-200/80 mb-10">
+        <button data-filter="all" class="filter-btn active px-4 py-2 rounded-xl text-xs font-bold border transition-all">
+          All Products (3)
+        </button>
+        <button data-filter="saas" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all">
+          <i data-lucide="cloud" class="w-3.5 h-3.5 inline mr-1 text-indigo-500"></i>
+          SaaS Products
+        </button>
+        <button data-filter="plugin" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all">
+          <i data-lucide="puzzle" class="w-3.5 h-3.5 inline mr-1 text-purple-500"></i>
+          Plugins &amp; Extensions
+        </button>
+        <button data-filter="integration" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all">
+          <i data-lucide="cable" class="w-3.5 h-3.5 inline mr-1 text-blue-500"></i>
+          Integrations &amp; APIs
+        </button>
+      </div>
+
+      <!-- Products Grid -->
+      <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- ================================================================= -->
+        <!-- 1. DUMMY SAAS PRODUCT (Harish can update this with actual SaaS)   -->
+        <!-- ================================================================= -->
+        <article 
+          class="product-card card-glow bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between shadow-sm relative overflow-hidden group"
+          data-category="saas"
+          data-tags="saas workflow automation analytics teams cloud productivity"
+        >
+          <!-- Top Tag & Status -->
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-700 border border-indigo-100">
+                <i data-lucide="cloud" class="w-3.5 h-3.5"></i>
+                SaaS Product
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-100">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 status-indicator"></span>
+                Live Beta
+              </span>
+            </div>
+
+            <!-- Product Icon & Header -->
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 text-white flex items-center justify-center shrink-0 shadow-md shadow-indigo-500/25">
+                <i data-lucide="zap" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="product-title text-xl font-extrabold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                  FlowDesk SaaS
+                </h3>
+                <p class="text-xs text-slate-500 font-medium">By HAMK Apps • Cloud Platform</p>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <p class="product-description text-slate-600 text-sm leading-relaxed mb-6">
+              An all-in-one smart operations platform designed for modern product teams. Automate repetitive business workflows, sync team workspaces, and view real-time performance analytics in a centralized dashboard.
+            </p>
+
+            <!-- Key Feature Bullets -->
+            <div class="space-y-2 mb-6">
+              <div class="flex items-center gap-2 text-xs font-medium text-slate-700">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                <span>Multi-tenant workspace with role-based access</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-slate-700">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                <span>Visual drag-and-drop workflow builder</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-slate-700">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                <span>Real-time webhook notifications &amp; audit trails</span>
+              </div>
+            </div>
+
+            <!-- Technology / Capability Tags -->
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="text-[11px] font-mono font-medium px-2 py-0.5 rounded-md bg-slate-100 text-slate-600">Next.js</span>
+              <span class="text-[11px] font-mono font-medium px-2 py-0.5 rounded-md bg-slate-100 text-slate-600">PostgreSQL</span>
+              <span class="text-[11px] font-mono font-medium px-2 py-0.5 rounded-md bg-slate-100 text-slate-600">Tailwind</span>
+              <span class="text-[11px] font-mono font-medium px-2 py-0.5 rounded-md bg-indigo-50 text-indigo-700 font-semibold">Freemium</span>
+            </div>
+          </div>
+
+          <!-- Card Bottom Action Links -->
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+            <a href="#contact" class="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 transition-all shadow-sm">
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              Launch App / Demo
+            </a>
+            <a href="#contact" class="py-2.5 px-3 rounded-xl text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-all border border-slate-200" title="View documentation or request access">
+              <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- ================================================================= -->
+        <!-- 2. DUMMY PLUGIN PRODUCT (Harish can update this with actual plugin)-->
+        <!-- ================================================================= -->
+        <article 
+          class="product-card card-glow bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between shadow-sm relative overflow-hidden group"
+          data-category="plugin"
+          data-tags="plugin extension chrome firefox developer productivity tools json sync"
+        >
+          <!-- Top Tag & Status -->
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-purple-50 text-purple-700 border border-purple-100">
+                <i data-lucide="puzzle" class="w-3.5 h-3.5"></i>
+                Plugin / Extension
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-700 bg-indigo-50 px-2.5 py-0.5 rounded-full border border-indigo-100">
+                <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+                v1.2.0 Stable
+              </span>
+            </div>
+
+            <!-- Product Icon & Header -->
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 text-white flex items-center justify-center shrink-0 shadow-md shadow-purple-500/25">
+                <i data-lucide="box" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="product-title text-xl font-extrabold text-slate-900 group-hover:text-purple-600 transition-colors">
+                  QuickSync Pro
+                </h3>
+                <p class="text-xs text-slate-500 font-medium">By HAMK Apps • Browser Extension</p>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <p class="product-description text-slate-600 text-sm leading-relaxed mb-6">
+              A light-speed browser extension for developers and power users. Instantly captures, formats, and syncs API payload fragments, cookies, and local test states across multiple browser tabs and devices.
+            </p>
+
+            <!-- Key Feature Bullets -->
+            <div class="space-y-2 mb-6">
+              <div class="flex items-center gap-2 text-xs font-medium text-slate-700">
+                <i data-lucide="check" class="w-4 h-4 text-purple-600 shrink-0"></i>
+                <span>One-click JSON formatting &amp; cURL exporter</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-slate-700">
+                <i data-lucide="check" class="w-4 h-4 text-purple-600 shrink-0"></i>
+                <span>Manifest V3 compliant with zero telemetry tracking</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-slate-700">
+                <i data-lucide="check" class="w-4 h-4 text-purple-600 shrink-0"></i>
+                <span>Chrome &amp; Firefox cross-browser compatibility</span>
+              </div>
+            </div>
+
+            <!-- Technology / Capability Tags -->
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="text-[11px] font-mono font-medium px-2 py-0.5 rounded-md bg-slate-100 text-slate-600">TypeScript</span>
+              <span class="text-[11px] font-mono font-medium px-2 py-0.5 rounded-md bg-slate-100 text-slate-600">WebExtensions</span>
+              <span class="text-[11px] font-mono font-medium px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 font-semibold">100% Free</span>
+            </div>
+          </div>
+
+          <!-- Card Bottom Action Links -->
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+            <a href="https://github.com/honeyonsys" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold text-white bg-purple-600 hover:bg-purple-700 transition-all shadow-sm">
+              <i data-lucide="download" class="w-3.5 h-3.5"></i>
+              Get Extension
+            </a>
+            <a href="https://github.com/honeyonsys" target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 rounded-xl text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-all border border-slate-200" title="Source code on GitHub">
+              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- ================================================================= -->
+        <!-- 3. DUMMY INTEGRATION / API (Example for Integrations category)    -->
+        <!-- ================================================================= -->
+        <article 
+          class="product-card card-glow bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between shadow-sm relative overflow-hidden group"
+          data-category="integration"
+          data-tags="integration api webhook relay backend developer bridge"
+        >
+          <!-- Top Tag & Status -->
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-blue-50 text-blue-700 border border-blue-100">
+                <i data-lucide="cable" class="w-3.5 h-3.5"></i>
+                Integration / API
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-700 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-100">
+                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                In Development
+              </span>
+            </div>
+
+            <!-- Product Icon & Header -->
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center shrink-0 shadow-md shadow-blue-500/25">
+                <i data-lucide="share-2" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="product-title text-xl font-extrabold text-slate-900 group-hover:text-blue-600 transition-colors">
+                  OmniHook Relay
+                </h3>
+                <p class="text-xs text-slate-500 font-medium">By HAMK Apps • Integration Bridge</p>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <p class="product-description text-slate-600 text-sm leading-relaxed mb-6">
+              A resilient webhook broker and event ingestion bridge that connects third-party services (Stripe, GitHub, Slack) to your backend with automatic retries and HMAC signatures.
+            </p>
+
+            <!-- Key Feature Bullets -->
+            <div class="space-y-2 mb-6">
+              <div class="flex items-center gap-2 text-xs font-medium text-slate-700">
+                <i data-lucide="check" class="w-4 h-4 text-blue-600 shrink-0"></i>
+                <span>Sub-10ms delivery latency with exponential backoff</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-slate-700">
+                <i data-lucide="check" class="w-4 h-4 text-blue-600 shrink-0"></i>
+                <span>End-to-end cryptographic signature validation</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-slate-700">
+                <i data-lucide="check" class="w-4 h-4 text-blue-600 shrink-0"></i>
+                <span>Interactive live payload inspection console</span>
+              </div>
+            </div>
+
+            <!-- Technology / Capability Tags -->
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="text-[11px] font-mono font-medium px-2 py-0.5 rounded-md bg-slate-100 text-slate-600">REST API</span>
+              <span class="text-[11px] font-mono font-medium px-2 py-0.5 rounded-md bg-slate-100 text-slate-600">Go / Redis</span>
+              <span class="text-[11px] font-mono font-medium px-2 py-0.5 rounded-md bg-blue-50 text-blue-700 font-semibold">Early Access</span>
+            </div>
+          </div>
+
+          <!-- Card Bottom Action Links -->
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+            <a href="#contact" class="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 transition-all shadow-sm">
+              <i data-lucide="key" class="w-3.5 h-3.5"></i>
+              Join Early Access
+            </a>
+            <a href="#contact" class="py-2.5 px-3 rounded-xl text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-all border border-slate-200" title="API documentation">
+              <i data-lucide="terminal" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Empty Search Result State -->
+      <div id="empty-state" class="hidden text-center py-16 bg-white rounded-2xl border border-dashed border-slate-300 my-8">
+        <div class="w-12 h-12 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-3">
+          <i data-lucide="search-x" class="w-6 h-6"></i>
+        </div>
+        <h4 class="font-bold text-slate-700 text-base">No matching products found</h4>
+        <p class="text-xs text-slate-500 mt-1">Try searching for a different keyword or reset the category filter.</p>
+      </div>
+
+      <!-- Add New Products Note for Harish -->
+      <!-- <div class="mt-12 p-5 rounded-2xl bg-indigo-50/70 border border-indigo-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div class="flex items-start gap-3">
+          <div class="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center shrink-0 mt-0.5">
+            <i data-lucide="info" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <p class="text-xs font-bold text-indigo-950 uppercase tracking-wide">Developer Tip</p>
+            <p class="text-xs sm:text-sm text-indigo-900 mt-0.5">
+              Ready to showcase your actual products? Easily duplicate any of the card blocks above inside <code class="px-1.5 py-0.5 bg-white rounded border border-indigo-200 font-mono text-xs">index.html</code>.
+            </p>
+          </div>
+        </div>
+        <a href="#contact" class="shrink-0 px-4 py-2 rounded-xl bg-white text-indigo-700 text-xs font-bold border border-indigo-200 hover:bg-indigo-50 shadow-sm transition-all">
+          Suggest a Product
+        </a>
+      </div> -->
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================ -->
+  <!-- CONTACT DETAILS SECTION                                      -->
+  <!-- ============================================================ -->
+  <section id="contact" class="py-20 bg-slate-50 relative border-t border-slate-200/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 text-indigo-600 font-bold text-xs uppercase tracking-wider mb-2">
+          <i data-lucide="message-square" class="w-4 h-4"></i>
+          Direct Communication
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Contact Details
+        </h2>
+        <p class="text-slate-600 text-base mt-2">
+          Have questions regarding our SaaS products, browser extensions, or custom integrations? Reach out directly.
+        </p>
+      </div>
+
+      <!-- Direct Contact Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        
+        <!-- Email Card -->
+        <div class="bg-white p-7 sm:p-8 rounded-2xl border border-slate-200 shadow-sm hover:border-indigo-300 hover:shadow-md transition-all flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+              <i data-lucide="mail" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Email Us</h3>
+            <a href="mailto:contact@hamkapps.in" class="text-xl font-extrabold text-slate-900 hover:text-indigo-600 transition-colors block mt-1.5 break-all">
+              contact@hamkapps.in
+            </a>
+            <p class="text-xs text-slate-500 mt-2">
+              Alternative: <span class="font-mono text-slate-700">honeyonsys@gmail.com</span>
+            </p>
+          </div>
+          <div class="mt-6 pt-5 border-t border-slate-100 flex items-center justify-between">
+            <button 
+              id="copy-email-btn" 
+              data-email="contact@hamkapps.in"
+              class="text-xs font-bold text-indigo-600 hover:text-indigo-700 inline-flex items-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-indigo-50 transition-colors"
+            >
+              <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+              Copy Email
+            </button>
+            <span id="copy-feedback" class="text-xs text-emerald-600 font-semibold opacity-0 transition-opacity">Copied!</span>
+          </div>
+        </div>
+
+        <!-- WhatsApp / Phone Card -->
+        <div class="bg-white p-7 sm:p-8 rounded-2xl border border-slate-200 shadow-sm hover:border-emerald-300 hover:shadow-md transition-all flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+              <i data-lucide="message-circle" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">WhatsApp / Phone</h3>
+            <a 
+              href="https://wa.me/917087196464" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="text-xl font-extrabold text-slate-900 hover:text-emerald-600 transition-colors block mt-1.5"
+            >
+              +91 70871 96464
+            </a>
+            <p class="text-xs text-slate-500 mt-2">
+              Available on WhatsApp (Mon - Sat, 9:00 AM - 6:00 PM IST)
+            </p>
+          </div>
+          <div class="mt-6 pt-5 border-t border-slate-100 flex items-center justify-between">
+            <a 
+              href="https://wa.me/917087196464" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="text-xs font-bold text-emerald-600 hover:text-emerald-700 inline-flex items-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-emerald-50 transition-colors"
+            >
+              <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+              Chat on WhatsApp
+            </a>
+            <span class="text-[11px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-100 px-2.5 py-0.5 rounded-full font-mono">Quick Reply</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Location Note -->
+      <div class="mt-8 text-center text-xs text-slate-500">
+        <span>Headquarters: Remote across India • Inquiries answered within 24 hours</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================ -->
+  <!-- FOOTER                                                       -->
+  <!-- ============================================================ -->
+  <footer class="bg-white border-t border-slate-200 py-12 text-slate-600 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-100">
+        
+        <!-- Brand Info -->
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg brand-gradient flex items-center justify-center text-white font-bold text-sm">
+            H
+          </div>
+          <div>
+            <span class="font-extrabold text-slate-900">HAMK Apps</span>
+            <span class="text-slate-400 text-xs ml-2">Independent Software &amp; SaaS</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="flex flex-wrap items-center gap-6 text-xs font-semibold text-slate-500">
+          <a href="#intro" class="hover:text-indigo-600 transition-colors">Overview</a>
+          <a href="#products" class="hover:text-indigo-600 transition-colors">Products &amp; Plugins</a>
+          <a href="#contact" class="hover:text-indigo-600 transition-colors">Contact</a>
+        </div>
+
+        <!-- Direct Action -->
+        <a href="#intro" class="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 transition-all" title="Back to top">
+          <i data-lucide="arrow-up" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>
+          &copy; <span id="current-year">2026</span> <strong>HAMK Apps</strong> (<a href="https://hamkapps.in" class="hover:underline text-indigo-600">hamkapps.in</a>). All rights reserved.
+        </p>
+        <p class="flex items-center gap-2">
+          <span>Crafted by <a href="https://honeyonsys.github.io" target="_blank">honeyonsys</a></span>
+          <span>•</span>
+          <a href="mailto:contact@hamkapps.in" class="hover:underline text-slate-700">contact@hamkapps.in</a>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+  <!-- Load Main Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
